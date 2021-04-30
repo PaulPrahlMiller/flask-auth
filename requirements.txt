@@ -1,0 +1,11 @@
+# Unittest
+coverage
+
+# Linters
+flake8
+flake8-docstrings
+flake8-polyfill
+pylint
+
+# Flask framework
+flask

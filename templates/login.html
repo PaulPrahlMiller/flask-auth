@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="{{url_for('login')}}" method="POST" onsubmit="">
+        <label for="name">Username</label>
+        <input type="text" id='name_input' name='username' placeholder="enter username"><br><br>
+        <label for="password">Password</label>
+        <input type="password" id='password_input' name='password' placeholder="enter password"><br><br>
+        <input type="radio" name="org_type" id="restaurant_select" value='restaurant' checked>
+        <label for="restaurant_select">restaurant</label>
+        <input type="radio" name="org_type" id="npo_select" value='npo'>
+        <label for="npo_select">NPO</label><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>{% if error %} Incorrect username or password {% endif %}</p>
+</body>
+</html>
